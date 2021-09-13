@@ -21,7 +21,7 @@ public class ServerBootstrapApplication implements CommandLineRunner {
 
         new Thread(() -> {
             System.out.println("开始启动服务器");
-            rpcServer.start("127.0.0.1",9900);
+            rpcServer.start("127.0.0.1",9901);
         }).start();
     }
 }
