@@ -10,6 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,6 +27,10 @@ public class RpcServer implements DisposableBean {
     private RpcServerHandler rpcServerHandler;
 
     public void start(String ip,int port)  {
+
+        ZkClient zkClient = new ZkClient(ip,port);
+
+
 
         try {
             bossGroup = new NioEventLoopGroup(1);
