@@ -26,9 +26,11 @@ public class RpcServer implements DisposableBean {
     @Autowired
     private RpcServerHandler rpcServerHandler;
 
+    private String path ;
     public void start(String ip,int port)  {
 
         ZkClient zkClient = new ZkClient(ip,port);
+        zkClient.exists(path);
 
 
 
