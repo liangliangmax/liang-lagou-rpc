@@ -20,7 +20,8 @@
 		<module>netty-chat</module>
 		<module>rmi-demo</module>
 		<module>lg-rpc</module>
-	</modules>
+        <module>lg-zookeeper-rpc</module>
+    </modules>
 
 	<packaging>pom</packaging>
 
